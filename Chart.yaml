@@ -1,4 +1,0 @@
-apiVersion: v1
-description: The Istio stack for Rancher
-name: rancher-istio
-version: 0.1.0

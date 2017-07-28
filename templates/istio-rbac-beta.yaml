@@ -7,6 +7,9 @@ kind: ClusterRole
 apiVersion: rbac.authorization.k8s.io/v1beta1
 metadata:
   name: istio-manager
+  annotations:
+    "helm.sh/hook": pre-install
+    "helm.sh/hook-weight": "0"
 rules:
 - apiGroups: ["istio.io"]
   resources: ["istioconfigs", "istioconfigs.istio.io"]
@@ -22,6 +25,9 @@ kind: ClusterRole
 apiVersion: rbac.authorization.k8s.io/v1beta1
 metadata:
   name: istio-ca
+  annotations:
+    "helm.sh/hook": pre-install
+    "helm.sh/hook-weight": "0"
 rules:
 - apiGroups: [""]
   resources: ["secrets"]
@@ -35,6 +41,9 @@ kind: ClusterRole
 apiVersion: rbac.authorization.k8s.io/v1beta1
 metadata:
   name: istio-sidecar
+  annotations:
+    "helm.sh/hook": pre-install
+    "helm.sh/hook-weight": "0"
 rules:
 - apiGroups: ["istio.io"]
   resources: ["istioconfigs"]
@@ -51,6 +60,9 @@ kind: RoleBinding
 apiVersion: rbac.authorization.k8s.io/v1beta1
 metadata:
   name: istio-manager-admin-role-binding
+  annotations:
+    "helm.sh/hook": pre-install
+    "helm.sh/hook-weight": "0"
 subjects:
 - kind: ServiceAccount
   name: istio-manager-service-account
@@ -64,6 +76,9 @@ kind: RoleBinding
 apiVersion: rbac.authorization.k8s.io/v1beta1
 metadata:
   name: istio-ca-role-binding
+  annotations:
+    "helm.sh/hook": pre-install
+    "helm.sh/hook-weight": "0"
 subjects:
 - kind: ServiceAccount
   name: istio-ca-service-account
@@ -77,6 +92,9 @@ kind: RoleBinding
 apiVersion: rbac.authorization.k8s.io/v1beta1
 metadata:
   name: istio-ingress-admin-role-binding
+  annotations:
+    "helm.sh/hook": pre-install
+    "helm.sh/hook-weight": "0"
 subjects:
 - kind: ServiceAccount
   name: istio-ingress-service-account
@@ -92,6 +110,9 @@ kind: RoleBinding
 apiVersion: rbac.authorization.k8s.io/v1beta1
 metadata:
   name: istio-sidecar-role-binding
+  annotations:
+    "helm.sh/hook": pre-install
+    "helm.sh/hook-weight": "0"
 subjects:
 - kind: ServiceAccount
   name: default

@@ -2,11 +2,19 @@ apiVersion: v1
 entries:
   istio-helm:
   - apiVersion: v1
-    created: 2017-07-27T17:08:26.068297097-07:00
+    created: 2017-07-28T16:23:50.712066665-07:00
+    description: The Istio stack for Rancher
+    digest: b50c8e7201108685733841e6dde98d534bed8a5e8af598267a649f911d8485a4
+    name: istio-helm
+    urls:
+    - https://wjimenez5271.github.io/istio-helm/istio-helm-0.4.0.tgz
+    version: 0.4.0
+  - apiVersion: v1
+    created: 2017-07-28T16:23:50.709802174-07:00
     description: The Istio stack for Rancher
     digest: 7bc5c1c934caee27bfd574501972901bad991adb7b71cacf6afe9767217c7228
     name: istio-helm
     urls:
     - https://wjimenez5271.github.io/istio-helm/istio-helm-0.1.0.tgz
     version: 0.1.0
-generated: 2017-07-27T17:08:26.06291835-07:00
+generated: 2017-07-28T16:23:50.706526479-07:00
